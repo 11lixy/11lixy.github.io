@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://11lixy.github.io</id>
     <title>xy&apos;s bog</title>
-    <updated>2021-07-11T14:05:43.415Z</updated>
+    <updated>2021-07-11T14:52:09.043Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://11lixy.github.io"/>
     <link rel="self" href="https://11lixy.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://11lixy.github.io/images/avatar.png</logo>
     <icon>https://11lixy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, xy&apos;s bog</rights>
+    <entry>
+        <title type="html"><![CDATA[试一试]]></title>
+        <id>https://11lixy.github.io/post/shi-yi-shi/</id>
+        <link href="https://11lixy.github.io/post/shi-yi-shi/">
+        </link>
+        <updated>2021-07-11T14:51:17.000Z</updated>
+        <content type="html"><![CDATA[<p>这是测试的</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[别来无恙]]></title>
         <id>https://11lixy.github.io/post/hello-gridea/</id>
