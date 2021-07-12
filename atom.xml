@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://11lixy.github.io</id>
     <title>xy&apos;s bog</title>
-    <updated>2021-07-11T14:52:09.043Z</updated>
+    <updated>2021-07-12T14:31:26.599Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://11lixy.github.io"/>
     <link rel="self" href="https://11lixy.github.io/atom.xml"/>
@@ -11,12 +11,38 @@
     <icon>https://11lixy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, xy&apos;s bog</rights>
     <entry>
-        <title type="html"><![CDATA[试一试]]></title>
-        <id>https://11lixy.github.io/post/shi-yi-shi/</id>
-        <link href="https://11lixy.github.io/post/shi-yi-shi/">
+        <title type="html"><![CDATA[关于web的一些名词解释]]></title>
+        <id>https://11lixy.github.io/post/guan-yu-web-de-yi-xie-ming-ci-jie-shi/</id>
+        <link href="https://11lixy.github.io/post/guan-yu-web-de-yi-xie-ming-ci-jie-shi/">
         </link>
-        <updated>2021-07-11T14:51:17.000Z</updated>
-        <content type="html"><![CDATA[<p>这是测试的</p>
+        <updated>2021-07-12T14:18:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>域名：网站的名称，可以在第三方注册</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>域名：网站的名称，可以在第三方注册</p>
+<!-- more -->
+<p>域名发现对于安全测试意义：不同的域名架构不同，可用多级域名多一种可能性。</p>
+<!-- more -->
+<p>dns：域名与ip地址的转换。</p>
+<!-- more -->
+<p>本地hosts与dns的关系：可以在本地hosts设置网站指定到某一个ip地址，和真实ip不一样，例如钓鱼网</p>
+<!-- more -->
+<p>站。<br>
+cdn：内容分发网络，节点技术，用户通过节点访问，选择最优节点，访问的是节点上的。</p>
+<!-- more -->
+<p>后门；攻击者留的便于下次进行操作的</p>
+<!-- more -->
+<p>web组成架构模型：源码→操作系统→中间件→数据库</p>
+<!-- more -->
+<p>架构漏洞安全测试简要介绍：<br>
+从web层面为主：<br>
+1.sql注入<br>
+2.文件上传<br>
+3.xss<br>
+4.代码执行<br>
+5.变量覆盖<br>
+第三方漏洞<br>
+exe后门<br>
+app漏洞也可能和网站一样</p>
 ]]></content>
     </entry>
     <entry>
@@ -34,21 +60,6 @@
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
 <a href="https://gridea.dev/">Gridea 主页</a><br>
 <a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
